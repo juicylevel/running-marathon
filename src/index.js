@@ -1,4 +1,4 @@
-import register from 'register';
+import register from './register';
 
 const user = {
 	name: 'Vasya Pupkin',
