@@ -10,17 +10,18 @@
 // npm install --save-dev uglifyjs-webpack-plugin
 // npm install babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack
 // npm install webpack-contrib/html-webpack-plugin -D -> fix dependency bug
+// npm install style-loader css-loader sass-loader node-sass extract-text-webpack-plugin -D
 
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const env = process.env.NODE_ENV || 'production';
 
 module.exports = {
-	mode: env,
 	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname, 'build'),
@@ -36,7 +37,13 @@ module.exports = {
 					presets: ['@babel/preset-env']
 				}
 			}
-		}]
+		}, {
+			test: /\.scss$/,
+			use: ExtractTextPlugin.extract({
+				fallback: 'style-loader',
+				use: ['css-loader', 'sass-loader']
+			})
+    	}]
 	},
 	plugins: [
 		new CleanWebpackPlugin(['build']),
@@ -56,6 +63,7 @@ module.exports = {
 				minifyURLs: true
 			}
 		}),
+		new ExtractTextPlugin('style.css'),
 		new webpack.DefinePlugin(env),
 		new UglifyJSPlugin()
 	]

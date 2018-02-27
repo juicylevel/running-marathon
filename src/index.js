@@ -1,4 +1,5 @@
 import register from './register';
+import './scss/index.scss';
 
 const user = {
 	name: 'Vasya Pupkin',
