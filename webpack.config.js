@@ -8,7 +8,7 @@
 // npm install --save-dev html-webpack-plugin
 // npm install --save-dev clean-webpack-plugin
 // npm install --save-dev uglifyjs-webpack-plugin
-// npm install babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack
+// npm install --save-dev babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack
 // npm install style-loader css-loader sass-loader node-sass extract-text-webpack-plugin -D
 
 const path = require('path');
