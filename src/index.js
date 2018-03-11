@@ -1,9 +1,7 @@
-import register from './register';
+import $ from 'jquery';
+import Parallax from './Parallax';
 import './scss/index.scss';
 
-const user = {
-	name: 'Vasya Pupkin',
-	email: 'vasya33pupkin@gmail.com'
-}
-
-register(user);
+$(document).ready(() => {
+	new Parallax();
+})
