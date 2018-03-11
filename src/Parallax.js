@@ -14,7 +14,7 @@ class Parallax {
 	    	top: movement + 'px'
 	    })
 	}
-
+    
 	handleScroll (event) {
 		const me = this;
 		
