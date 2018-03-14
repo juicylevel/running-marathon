@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import { TweenLite, Power1 } from 'gsap';
 
 class Parallax {
     constructor () {
@@ -10,8 +11,9 @@ class Parallax {
         const depth = $layer.attr('data-depth');
         const movement = -(topDistance * depth);
 
-        $layer.css({
-            top: movement + 'px'
+        TweenLite.to($layer, 1.5, { 
+            top: movement, 
+            ease: Power1.easeOut
         });  
     }
 
@@ -25,12 +27,6 @@ class Parallax {
 
     init () {
         $(window).on('scroll', this.handleScroll.bind(this)); 
-        if (window) {
-            let a = 1;
-            a++;
-            a--;
-            console.log(a + 3);
-        }
     }
 }
 

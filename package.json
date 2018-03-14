@@ -4,6 +4,7 @@
     "description": "![Иллюстрация к проекту](https://github.com/juicylevel/running-marathon/raw/master/public/image/sestroreck.jpg)",
     "main": "webpack.config.js",
     "dependencies": {
+        "gsap": "^1.20.4",
         "jquery": "^3.3.1"
     },
     "scripts": {
