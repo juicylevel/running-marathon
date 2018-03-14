@@ -3,5 +3,5 @@ import Parallax from './Parallax';
 import './scss/index.scss';
 
 $(document).ready(() => {
-	new Parallax();
-})
+    new Parallax();
+});

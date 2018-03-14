@@ -12,15 +12,15 @@ class Parallax {
 
         $layer.css({
             top: movement + 'px'
-        })  
+        });  
     }
 
-    handleScroll (event) {
+    handleScroll () {
         const me = this;
 
         $('.layer').each(function () {
             me.updateLayer($(this));
-        })
+        });
     }
 
     init () {
