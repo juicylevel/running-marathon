@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const env = 'development';
 
 module.exports = {
+    watch: true,
     devtool: 'cheap-module-source-map',
     entry: './src/index.js',
     output: {

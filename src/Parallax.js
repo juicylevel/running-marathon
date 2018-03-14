@@ -24,7 +24,13 @@ class Parallax {
     }
 
     init () {
-        $(window).on('scroll', this.handleScroll.bind(this));
+        $(window).on('scroll', this.handleScroll.bind(this)); 
+        if (window) {
+            let a = 1;
+            a++;
+            a--;
+            console.log(a + 3);
+        }
     }
 }
 
