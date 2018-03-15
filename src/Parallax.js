@@ -5,39 +5,27 @@ import 'gsap/ScrollToPlugin';
 class Parallax {
     constructor () {
         this.mousewheelHandler = this.mousewheelHandler.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
         this.init();
     }
 
-    // updateLayer ($layer) {
-    //     const topDistance = window.pageYOffset;
-    //     const depth = $layer.attr('data-depth');
-    //     const movement = -(topDistance * depth);
+    moveLayer ($layer, scrollTop) {
+        const speed = $layer.attr('data-scroll-speed');
+        $layer.css('transform', 'translateY(' + -(scrollTop * speed) + 'px)');
+    }
 
-    //     TweenLite.to($layer, 1.5, { 
-    //         top: movement, 
-    //         ease: Power1.easeOut
-    //     });  
-    // }
+    moveLayers () {
+        const me = this;
+        const scrollTop = $(window).scrollTop();
 
-    // handleScroll () {
-    //     const me = this;
+        $('.layer').each(function () {
+            me.moveLayer($(this), scrollTop);
+        });
+    }
 
-    //     $('.layer').each(function () {
-    //         me.updateLayer($(this));
-    //     });
-    // }
-
-    // updateLayer ($layer, delta) {
-        
-    // }
-
-    // updateLayers (delta) {
-    //     const me = this;
-
-    //     $('.layer').each(function () {
-    //         me.updateLayer($(this), delta);
-    //     });
-    // }
+    handleScroll () {
+        this.moveLayers();
+    }
 
     scrollPage (delta) {
         const time = 0.8;
@@ -72,15 +60,13 @@ class Parallax {
     }
 
     init () {
-        // $(window).on('scroll', this.handleScroll.bind(this)); 
-        // $(window).on('mousewheel DOMMouseScroll', this.mousewheelHandler); 
+        $(window).on('scroll', this.handleScroll); 
 
         if (window.addEventListener) {
             window.addEventListener('DOMMouseScroll', this.mousewheelHandler, false);
         }
 
-        window.onmousewheel = 
-        document.onmousewheel = this.mousewheelHandler;
+        window.onmousewheel = document.onmousewheel = this.mousewheelHandler;
     }
 }
 
