@@ -23,7 +23,7 @@ const env = 'production';
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'dist'),
         filename: './js/build.js'
     },
     module: {
@@ -45,7 +45,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new CleanWebpackPlugin(['build']),
+        new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             inject: true,
             template: './public/index.html',
