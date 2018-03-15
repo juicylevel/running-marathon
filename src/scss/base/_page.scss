@@ -1,0 +1,14 @@
+::-webkit-scrollbar {
+    background: #3f3f3f;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    -webkit-border-radius: 0px;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
