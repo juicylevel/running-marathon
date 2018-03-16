@@ -10,6 +10,7 @@
 // npm install --save-dev uglifyjs-webpack-plugin
 // npm install --save-dev babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env webpack
 // npm install style-loader css-loader sass-loader node-sass extract-text-webpack-plugin -D
+// npm install --save-dev imports-loader 
 
 const path = require('path');
 const webpack = require('webpack');
@@ -25,6 +26,15 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: './js/build.js'
+    },
+    resolve: {
+        alias: {
+            test: require.resolve('scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+            loader: 'imports-loader?define=>false'
+        },
+        modules: [
+            path.resolve(__dirname), path.resolve(__dirname, 'node_modules')
+        ]
     },
     module: {
         rules: [{
@@ -42,6 +52,9 @@ module.exports = {
                 fallback: 'style-loader',
                 use: ['css-loader', 'sass-loader']
             })
+        }, {
+            test: /\.js$/,
+            loader: 'imports-loader?define=>false'
         }]
     },
     plugins: [
