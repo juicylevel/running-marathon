@@ -2,7 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const env = 'development';
@@ -14,15 +14,6 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: './js/build.js'
-    },
-    resolve: {
-        alias: {
-            test: require.resolve('scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-            loader: 'imports-loader?define=>false'
-        },
-        modules: [
-            path.resolve(__dirname), path.resolve(__dirname, 'node_modules')
-        ]
     },
     module: {
         rules: [{
@@ -46,8 +37,13 @@ module.exports = {
                 use: ['css-loader', 'sass-loader']
             })
         }, {
-            test: /\.js$/,
-            loader: 'imports-loader?define=>false'
+            test: /\.(png|jpe?g|gif)$/i,
+            use: {
+                loader: 'file-loader',
+                options: {
+                    outputPath: '../images'
+                }  
+            }
         }]
     },
     plugins: [

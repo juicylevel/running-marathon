@@ -1,14 +1,11 @@
 import $ from 'jquery';
-import { TimelineMax, TweenMax, Power1 } from 'gsap';
-import ScrollMagic from 'scrollmagic';
-import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
+import { TweenMax, Power1 } from 'gsap';
 import 'gsap/ScrollToPlugin';
 
 class Parallax {
     constructor () {
         this.mousewheelHandler = this.mousewheelHandler.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
-        this.scrollController = new ScrollMagic.Controller();
         this.init();
     }
 
@@ -62,21 +59,6 @@ class Parallax {
         this.scrollPage(delta);
     }
 
-    createScenes () {
-        const yellowToBlue = new TimelineMax().add([
-            TweenMax.fromTo($('body'), 1, {
-                backgroundColor: '#f0e08e'
-            }, {
-                backgroundColor: '#67d4ef',
-                ease: Power1.easeout
-            })
-        ]);
-        new ScrollMagic.Scene({
-            triggerElement: '.layer3',
-            offset: 10
-        }).setTween(yellowToBlue).addTo(this.scrollController);
-    }
-
     init () {
         $(window).on('scroll', this.handleScroll); 
 
@@ -85,8 +67,6 @@ class Parallax {
         }
 
         window.onmousewheel = document.onmousewheel = this.mousewheelHandler;
-
-        this.createScenes();
     }
 }
 
