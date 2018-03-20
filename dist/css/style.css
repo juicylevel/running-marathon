@@ -13,6 +13,10 @@
 body {
   height: 5000px; }
 
+* {
+  margin: 0;
+  padding: 0; }
+
 .layers-wrapper {
   position: relative; }
 
@@ -28,3 +32,12 @@ body {
     height: $height;
     min-height: $height;
 }*/
+.trophy .picture {
+  background-image: url(../images/62dbf326170123768e3ffd42dcc70848.jpg);
+  width: 1024px;
+  height: 683px; }
+
+.participation .picture {
+  background-image: url(../images/62dbf326170123768e3ffd42dcc70848.jpg);
+  width: 1024px;
+  height: 683px; }
