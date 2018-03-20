@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { TweenMax, Power1 } from 'gsap';
+import { TweenMax, Power4 } from 'gsap';
 import 'gsap/ScrollToPlugin';
 
 class Parallax {
@@ -28,7 +28,7 @@ class Parallax {
     }
 
     scrollPage (delta) {
-        const time = 0.8;
+        const time = 1;
         const distance = 150;
         const $window = $(window);
 
@@ -36,7 +36,7 @@ class Parallax {
             scrollTo: { 
                 y: $window.scrollTop() - (distance * delta)
             }, 
-            ease: Power1.easeOut
+            ease: Power4.easeOut
         });
     }
 
