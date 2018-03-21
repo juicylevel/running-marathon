@@ -9,9 +9,6 @@ const env = 'development';
 
 module.exports = {
     watch: true,
-    watchOptions: {
-        poll: true
-    },
     devtool: 'cheap-module-source-map',
     entry: './src/index.js',
     output: {

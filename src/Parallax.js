@@ -28,7 +28,7 @@ class Parallax {
     }
 
     scrollPage (delta) {
-        const time = 1;
+        const time = 2;
         const distance = 150;
         const $window = $(window);
 
