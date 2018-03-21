@@ -1,3 +1,5 @@
+@import 'fonts';
+
 ::-webkit-scrollbar {
     background: #3f3f3f;
     width: 5px;
@@ -15,12 +17,6 @@
 
 body {
     height: 5000px;
-    background-color: #EEEEEE;
-}
-
-// TODO: setup normolize.css
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Rubik', sans-serif;
+    background-color: #ffffff;
+    font-family: $base-font, sans-serif;
 }

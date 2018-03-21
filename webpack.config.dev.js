@@ -9,6 +9,9 @@ const env = 'development';
 
 module.exports = {
     watch: true,
+    watchOptions: {
+        poll: true
+    },
     devtool: 'cheap-module-source-map',
     entry: './src/index.js',
     output: {
@@ -31,13 +34,13 @@ module.exports = {
                 }
             }
         }, {
-            test: /\.scss$/,
+            test: /\.(css|scss)$/,
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
                 use: ['css-loader', 'sass-loader']
             })
         }, {
-            test: /\.(png|jpe?g|gif)$/i,
+            test: /\.(png|jpe?g|gif)$/,
             use: {
                 loader: 'file-loader',
                 options: {

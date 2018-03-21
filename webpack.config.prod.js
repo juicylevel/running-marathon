@@ -39,10 +39,17 @@ module.exports = {
                 }
             }
         }, {
-            test: /\.scss$/,
+            test: /\.(css|scss)$/,
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
-                use: ['css-loader', 'sass-loader']
+                use: [{ 
+                    loader: 'css-loader',
+                    options: {
+                        minimize: true
+                    }
+                }, {
+                    loader: 'sass-loader'
+                }]
             })
         }, {
             test: /\.(png|jpe?g|gif)$/i,
