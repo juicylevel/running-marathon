@@ -1,10 +1,23 @@
 .text {
     border: 3px solid white;
-    padding: 20px;
-    color: white;
+    padding: 25px;
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
+    
+}
+
+.text.white {
+    color: white;
+    border-color: white;
+}
+
+.text.black {
+    color: black;
+    border-color: black;
+}
+
+.text.trophy {
     top: 600px;
 
     margin-left: auto;
@@ -12,4 +25,11 @@
     left: 0;
     right: 0;
     width: 530px;
+}
+
+.text.marathon {
+    top: 2000px;
+
+    left: 55%;
+    width: 590px;
 }
