@@ -1,0 +1,6 @@
+@mixin image($file, $width, $height) {
+    background: url('../images/' + $file) 100% 100% no-repeat;
+    background-size: cover;
+    height: $height + px;
+    width: $width + px;
+}

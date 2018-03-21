@@ -1,0 +1,19 @@
+@import '../../base/colors';
+
+.bordered-text {
+    border: 3px solid $white;
+    padding: 25px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bordered-text-white {
+    color: $white;
+    border-color: $white;
+}
+
+.bordered-text-black {
+    color: $black;
+    border-color: $black;
+}

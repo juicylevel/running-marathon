@@ -1,0 +1,26 @@
+@import 'assets/text';
+
+.trophy-header {
+    top: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 570px;
+
+    .text {
+        @extend .bordered-text;
+        @extend .bordered-text-white;
+    }
+}
+
+.marathon-header {
+    top: 2000px;
+    left: 55%;
+    width: 590px;
+
+    .text {
+        @extend .bordered-text;
+        @extend .bordered-text-black;
+    }
+}
