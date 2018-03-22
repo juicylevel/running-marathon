@@ -1,0 +1,21 @@
+#end {
+    header {
+        position: absolute;
+        top: 440vh;
+        text-align: center;
+        
+        .text {
+            font-size: 2vw;
+            text-transform: uppercase;
+        }
+    }
+
+    .picture {
+        left: 16%;
+        top: 520vh;
+        width: 50vw;
+        height: 55vh;
+        background: url('../images/end.jpg') center center no-repeat;
+        background-size: 100%;
+    }
+}

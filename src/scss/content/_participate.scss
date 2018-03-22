@@ -1,0 +1,26 @@
+#participate {
+    header {
+        position: absolute;
+        top: 460vh;
+        text-align: center;
+        
+        .text {
+            font-size: 2vw;
+            text-transform: uppercase;
+        }
+    }
+
+    /*.picture {
+        left: 16%;
+        top: 410vh;
+        width: 50vw;
+        height: 55vh;
+        background: url('../images/participate.jpg') center center no-repeat;
+        background-size: 100%;
+    }*/
+
+    .list {
+        top: 470vh;
+        font-size: 1.2vw;
+    }
+}

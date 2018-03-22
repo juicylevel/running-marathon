@@ -9,9 +9,23 @@ class Parallax {
         this.init();
     }
 
+    getTranslate ($obj) {
+        const matrix = $obj.css('transform').replace(/[^0-9\-.,]/g, '').split(',');
+        const x = matrix[12] || matrix[4] || 0;
+        const y = matrix[13] || matrix[5] || 0;
+        return { x, y };
+    }
+
     moveLayer ($layer, scrollTop) {
+        const layerTranslate = this.getTranslate($layer);
         const speed = $layer.attr('data-scroll-speed');
-        $layer.css('transform', `translateY(${-(scrollTop * speed)}px)`);
+        const transform = `
+            translate(
+                ${layerTranslate.x}px, 
+                ${-(scrollTop * speed)}px
+            )
+        `;
+        $layer.css('transform', transform);
     }
 
     moveLayers () {

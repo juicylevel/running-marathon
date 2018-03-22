@@ -1,0 +1,23 @@
+#prize {
+    header {
+        position: absolute;
+        top: 80vh;
+        left: 15%;
+        text-align: center;
+        max-width: 600px;
+        
+        .text {
+            font-size: 2vw;
+            text-transform: uppercase;
+        }
+    }
+
+    .picture {
+        right: 0;
+        top: 62vh;
+        width: 40vw;
+        height: 60vh;
+        background: url('../images/hand-card.png') center center no-repeat;
+        background-size: 100%;
+    }
+}

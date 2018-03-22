@@ -1,0 +1,43 @@
+#intro {
+    background-color: #ffffff;
+
+    header {
+        position: absolute;
+        top: 10vh;
+        left: 10vw;
+        text-align: center;
+        
+        width: 30vw;
+        height: 20vw;
+
+        min-width: 200px;
+        min-height: 80px;
+
+        background: url('../images/logo.png') center center no-repeat;
+        background-size: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        
+        .text {
+            margin-top: 30vh;
+            margin-left: 35px;
+            font-size: 2vw;
+            text-transform: uppercase;
+            color: #4f5157;
+        }
+    }
+
+    height: 100vh;
+    background: url('../images/intro.jpg') center 0 no-repeat;
+    background-size: 100%;
+
+    /*.scroll-down {
+        position: relative;
+        left: 50%;
+        bottom: 50px;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background: url('../images/arrow-down.svg') center center no-repeat;
+        background-size: 100%;
+    }*/
+}

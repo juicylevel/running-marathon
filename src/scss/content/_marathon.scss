@@ -1,0 +1,40 @@
+#marathon {
+    header {
+        position: absolute;
+        top: 360vh;
+        text-align: center;
+        
+        .text {
+            font-size: 4vw;
+            text-transform: uppercase;
+        }
+    }
+
+    // .photo-1 {
+    //     left: 10%;
+    //     top: 75vh;
+    //     width: 40vw;
+    //     height: 60vh;
+    //     background: url('../images/marathon-1.jpg') center center no-repeat;
+    //     background-size: 100%;
+    // }
+
+    // .photo-2 {
+    //     right: 15%;
+    //     top: 95vh;
+    //     width: 25vw;
+    //     height: 80vh;
+    //     background: url('../images/marathon-2.jpg') center center no-repeat;
+    //     background-size: cover;
+    //     background-position-x: left;
+    // }
+
+    // .photo-3 {
+    //     left: 13%;
+    //     top: 175vh;
+    //     width: 35vw;
+    //     height: 55vh;
+    //     background: url('../images/marathon-3.jpg') center center no-repeat;
+    //     background-size: 100%;
+    // }
+}
