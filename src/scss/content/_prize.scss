@@ -1,22 +1,27 @@
+@import '../base/colors';
+
 #prize {
     header {
-        position: absolute;
-        top: 80vh;
-        left: 15%;
+        top: 183vh;
+        left: 10%;
         text-align: center;
         max-width: 600px;
         
         .text {
-            font-size: 2vw;
+            font-size: calc(2vw + 1vh);
             text-transform: uppercase;
+
+            .sport-life {
+                color: $green-color;
+            }
         }
     }
 
     .picture {
         right: 0;
-        top: 62vh;
-        width: 40vw;
-        height: 60vh;
+        top: calc(70vw + 40vh);//183vh;
+        width: 55vw;
+        height: 90vh;
         background: url('../images/hand-card.png') center center no-repeat;
         background-size: 100%;
     }
