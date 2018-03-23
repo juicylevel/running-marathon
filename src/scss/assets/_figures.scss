@@ -7,7 +7,7 @@
     }
 }
 
-@mixin scroll-down ($color: 'black', $vwidth: 8vw) {
+@mixin scroll-down ($color: 'black', $vwidth: 5vw) {
     background: url('../images/arrow-down-' + $color + '.svg') center center no-repeat;
     background-size: 100%;
     position: absolute;
