@@ -1,12 +1,23 @@
+@import '../assets/figures';
+
 #call {
+    height: 100vh;
+    background: #fffcf4;
+
     header {
         text-align: center;
-        top: 120vh;
+        top: 40vh;
 
         .text {
-            font-size: calc(3vw + 1.8vh);
+            font-size: calc(3vw + 2vh);
             text-transform: uppercase;
-            padding: 0px 1vw;
+            left: 0px;
+            right: 0px;
         }
+    }
+
+    .scroll-down {
+        @include scroll-down();
+        bottom: 5vh;
     }
 }

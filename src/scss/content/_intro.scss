@@ -1,8 +1,12 @@
 @import '../base/colors';
+@import '../assets/figures';
 
 // TODO: пропорциональный ресайз header (см. в iPad)
 // TODO: на маленьком разрешении заголовок по центру
+// TODO: leanse correction для главной фотографии
 #intro {
+    height: 100vh;
+
     header {
         top: 10vh;
         left: 10vw;
@@ -32,6 +36,7 @@
             width: 100%;
             height: 5%;
             bottom: 0;
+            opacity: 0.7;
         }
     }
 
@@ -42,14 +47,8 @@
         background-size: cover;
     }
 
-    /*.scroll-down {
-        position: relative;
-        left: 50%;
-        bottom: 50px;
-        transform: translateX(-50%);
-        width: 50px;
-        height: 50px;
-        background: url('../images/arrow-down.svg') center center no-repeat;
-        background-size: 100%;
-    }*/
+    .scroll-down {
+        @include scroll-down('white');
+        bottom: 5vh;
+    }
 }

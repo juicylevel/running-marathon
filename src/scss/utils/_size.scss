@@ -1,0 +1,8 @@
+@mixin sizev ($vwidth, $width, $height) {
+    width: $vwidth;
+    height: calc(#{$vwidth} * #{$height} / #{$width});
+}
+
+@mixin middleTop ($vwidth, $width, $height, $topOffset: 0) {
+    top: calc(50vh + #{$topOffset} - (#{$vwidth} * #{$height} / #{$width}) / 2);
+}

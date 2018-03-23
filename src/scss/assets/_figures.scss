@@ -1,0 +1,18 @@
+@keyframes up-down-slide {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 30px);
+    }
+}
+
+@mixin scroll-down ($color: 'black', $vwidth: 8vw) {
+    background: url('../images/arrow-down-' + $color + '.svg') center center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: calc((100vw - #{$vwidth}) / 2);
+    width: $vwidth;
+    height: $vwidth;
+    animation: up-down-slide 2s ease-in-out infinite;
+}

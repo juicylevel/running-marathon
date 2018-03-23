@@ -6,7 +6,7 @@ class Parallax {
     constructor () {
         this.mousewheelHandler = this.mousewheelHandler.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
-        this.init();
+        //this.init();
     }
 
     getTranslate ($obj) {
