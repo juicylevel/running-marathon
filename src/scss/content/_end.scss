@@ -1,19 +1,14 @@
 @import '../utils/size';
 @import '../assets/figures';
 
-@mixin image($fileName) {
-    background: url('../images/' + $fileName) center center no-repeat;
-    background-size: 100%;
-}
-
 #end {
-    height: 100vh;
-    background: #fffcf4;
-
     header {
+        position: absolute;
         text-align: center;
         width: 100%;
-        top: 40vh;
+        top: -75vh;
+        left: 0;
+        z-index: 100;
 
         background-color: rgba(255, 255, 255, 0.7);
 

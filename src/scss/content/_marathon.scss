@@ -1,9 +1,6 @@
 @import '../assets/figures';
 
 #marathon {
-    height: 100vh;
-    background: #ffffff;
-
     header {
         text-align: center;
         width: 100%;
@@ -15,6 +12,12 @@
             left: 0px;
             right: 0px;
         }
+    }
+
+    .bg {
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
     }
 
     .scroll-down {

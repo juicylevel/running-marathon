@@ -6,7 +6,7 @@ class Parallax {
     constructor () {
         this.mousewheelHandler = this.mousewheelHandler.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
-        //this.init();
+        this.init();
     }
 
     getTranslate ($obj) {
@@ -43,7 +43,7 @@ class Parallax {
 
     scrollPage (delta) {
         const time = 2;
-        const distance = 150;
+        const distance = 250;
         const $window = $(window);
 
         TweenMax.to($window, time, { 
