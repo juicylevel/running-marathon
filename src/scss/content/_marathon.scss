@@ -1,40 +1,24 @@
+@import '../assets/figures';
+
 #marathon {
+    height: 100vh;
+    background: #ffffff;
+
     header {
-        position: absolute;
-        top: 360vh;
         text-align: center;
-        
+        width: 100%;
+        top: 45vh;
+
         .text {
-            font-size: 4vw;
+            font-size: calc(3vw + 2vh);
             text-transform: uppercase;
+            left: 0px;
+            right: 0px;
         }
     }
 
-    // .photo-1 {
-    //     left: 10%;
-    //     top: 75vh;
-    //     width: 40vw;
-    //     height: 60vh;
-    //     background: url('../images/marathon-1.jpg') center center no-repeat;
-    //     background-size: 100%;
-    // }
-
-    // .photo-2 {
-    //     right: 15%;
-    //     top: 95vh;
-    //     width: 25vw;
-    //     height: 80vh;
-    //     background: url('../images/marathon-2.jpg') center center no-repeat;
-    //     background-size: cover;
-    //     background-position-x: left;
-    // }
-
-    // .photo-3 {
-    //     left: 13%;
-    //     top: 175vh;
-    //     width: 35vw;
-    //     height: 55vh;
-    //     background: url('../images/marathon-3.jpg') center center no-repeat;
-    //     background-size: 100%;
-    // }
+    .scroll-down {
+        @include scroll-down();
+        bottom: 5vh;
+    }
 }

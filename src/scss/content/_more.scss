@@ -1,52 +1,79 @@
+@import '../utils/size';
+
+$medalsWidth: 626;
+$medalsHeight: 418;
+
+$shirtWidth: 1117;
+$shirtHeight: 1472;
+
+$teamWidth: 626;
+$teamHeight: 417;
+
+@mixin sizeMedals ($vwidth) {
+    @include sizev($vwidth, $medalsWidth, $medalsHeight);
+}
+
+@mixin sizeShirt ($vwidth) {
+    @include sizev($vwidth, $shirtWidth, $shirtHeight);
+}
+
+@mixin sizeTeam ($vwidth) {
+    @include sizev($vwidth, $teamWidth, $teamHeight);
+}
+
+@mixin image($fileName) {
+    background: url('../images/' + $fileName) center center no-repeat;
+    background-size: 100%;
+}
+
 #more {
-    height: 100vh;
-    background: #f4fdff;
+    height: 140vh;
+    background: #fffcf4;
     
-    .more-1 {
+    .medals {
+        top: 10vh;
+        left: 10%;
+        @include sizeMedals(33vw);
+        @include image('medals.jpg');
+    }
+
+    .shirt {
+        top: 10vh;
         right: 10%;
-        top: 130vh;
-        width: 40vw;
-        height: 60vh;
-        background: url('../images/more-1.jpg') center center no-repeat;
-        background-size: 100%;
+        @include sizeShirt(30vw);
+        @include image('shirt.png');
     }
 
-    .more-2 {
-        left: 12%;
-        top: 110vh;
-        width: 25vw;
-        height: 60vh;
-        background: url('../images/more-2.jpeg') center center no-repeat;
-        background-size: cover;
+    .team {
+        top: 45vh;
+        left: 20%;
+        @include sizeShirt(35vw);
+        @include image('team.jpg');
     }
 
-    .more-3 {
-        transform: translateX(55%);
-        top: 210vh;
-        width: 35vw;
-        height: 55vh;
-        background: url('../images/more-3.jpg') center center no-repeat;
-        background-size: cover;
-    }
+    // .label-1 {
+    //     right: 10%;
+    //     top: 120vh;
+    //     font-size: 1.8vw;
+    //     text-transform: uppercase;
+    // }
 
-    .label-1 {
-        right: 10%;
-        top: 120vh;
-        font-size: 1.8vw;
-        text-transform: uppercase;
-    }
+    // .label-2 {
+    //     left: 14%;
+    //     top: 100vh;
+    //     font-size: 1.8vw;
+    //     text-transform: uppercase;
+    // }
 
-    .label-2 {
-        left: 14%;
-        top: 100vh;
-        font-size: 1.8vw;
-        text-transform: uppercase;
-    }
+    // .label-3 {
+    //     left: 16%;
+    //     top: 200vh;
+    //     font-size: 1.8vw;
+    //     text-transform: uppercase;
+    // }
 
-    .label-3 {
-        left: 16%;
-        top: 200vh;
-        font-size: 1.8vw;
-        text-transform: uppercase;
+    .scroll-down {
+        @include scroll-down();
+        bottom: 5vh;
     }
 }

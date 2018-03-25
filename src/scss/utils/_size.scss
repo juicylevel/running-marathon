@@ -3,6 +3,11 @@
     height: calc(#{$vwidth} * #{$height} / #{$width});
 }
 
-@mixin middleTop ($vwidth, $width, $height, $topOffset: 0) {
+@mixin middleTop ($vwidth, $width, $height, $topOffset: 0vh) {
     top: calc(50vh + #{$topOffset} - (#{$vwidth} * #{$height} / #{$width}) / 2);
+}
+
+@mixin toCenter ($vwidth, $width, $height) {
+    @include middleTop($vwidth, $width, $height);
+    left: calc((100vw - #{$vwidth}) / 2);
 }
