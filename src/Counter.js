@@ -25,14 +25,21 @@ class Counter {
         if (time > 0) {
             const daysTitle = declOfNum(remining.days(), ['день', 'дня', 'дней']);
             const hoursTitle = declOfNum(remining.hours(), ['час', 'часа', 'часов']);
-            const format = `D ${daysTitle} H ${hoursTitle} mm мин ss сек`;
+
+            const format = `
+                [<span class="marker">]D[</span>] ${daysTitle} 
+                [<span class="marker">]H[</span>] ${hoursTitle} 
+                [<span class="marker">]mm[</span>] мин 
+            `;
+
+            // [<span class="marker">]ss[</span>] сек
 
             reminingString = remining.format(format);
         } else {
             reminingString = 'марафон уже прошёл';
         }
         
-        $('#marathon-date').text(reminingString);
+        $('#marathon-date').html(reminingString);
     }
 
     tick () {

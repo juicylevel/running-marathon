@@ -1,8 +1,11 @@
 article {
     position: relative;
-    height: auto;
 }
 
 header {
     position: absolute;
+}
+
+.clear-both {
+    clear: both;
 }

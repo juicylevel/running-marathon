@@ -1,9 +1,12 @@
-@import 'colors';
-
 a {
     color: $green-color;
 }
 
 .marker {
     color: $green-color;
+}
+
+.big-article-text {
+    font-size: calc(3.3vw + 2.3vh);
+    text-transform: uppercase;
 }

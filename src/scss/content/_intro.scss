@@ -1,24 +1,17 @@
-@import '../base/colors';
-@import '../assets/figures';
-
-// TODO: пропорциональный ресайз header (см. в iPad)
-// TODO: на маленьком разрешении заголовок по центру
-// TODO: leanse correction для главной фотографии
 #intro {
     header {
+        @include sizev(32vw, 893, 568);
         top: 10vh;
         left: 10vw;
-        width: 38vw;
-        height: 27vw;
         min-width: 300px;
         min-height: 210px;
         background-color: rgba(255, 255, 255, 0.7);
 
         .logo {
-            margin-top: 10%;
-            height: 60%;
-            background: url('../images/logo.png') no-repeat;
-            background-size: 100%;
+            margin-top: 1%;
+            height: 70%;
+            background: url('../images/logo.png') center center no-repeat;
+            background-size: 60%;
         }
         
         .text {
@@ -43,6 +36,7 @@
         height: 100vh;
         background: url('../images/intro.jpg') center bottom no-repeat;
         background-size: cover;
+        will-change: scroll-position;
     }
 
     .scroll-down {

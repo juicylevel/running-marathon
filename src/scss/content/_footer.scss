@@ -1,11 +1,58 @@
-@import '../base/colors';
+@mixin image ($fileName) {
+    background-image: url('../images/' + $fileName);
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    margin-right: 7px;
+}
 
 footer {
     position: relative;
-    height: 50vh;
-    background-color: #333333;
-    color: #eeeeee;
+    height: 60vh;
+    background-color: $dark-bg-color;
+    color: $light-text-color;
     padding-top: 10vh;
     padding-left: 7vw;
-    line-height: 1.5em;
+
+    .social-links {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .registration {
+        float: left;
+
+        .btn {
+            font-weight: bold;
+        }
+    }
+
+    .links {
+        margin-bottom: 20px;
+    }
+
+    .icon-fb {
+        @include image('fb.png');
+    }
+
+    .icon-vk {
+        @include image('vk.png');
+    }
+
+    .icon-mail {
+        @include image('mail.png');
+    }
+
+    .h-line {
+        width: 45%;
+    }
+
+    .projects a {
+        display: inline-block;
+        margin-right: 18px;
+    }
+
+    .description {
+        line-height: 1.9em;
+    }
 }

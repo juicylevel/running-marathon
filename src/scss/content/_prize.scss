@@ -1,6 +1,3 @@
-@import '../utils/size';
-@import '../assets/figures';
-
 $handCardWidth: 561;
 $handCardHeight: 440;
 
@@ -41,7 +38,7 @@ $handCardHeight: 440;
     .bg {
         width: 100%;
         height: 100vh;
-        background: #ffffff;
+        background: $odd-article-color;
     }
 
     .scroll-down {
