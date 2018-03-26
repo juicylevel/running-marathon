@@ -18,7 +18,7 @@ class Parallax {
 
     moveLayer ($layer, scrollTop) {
         const layerTranslate = this.getTranslate($layer);
-        const speed = $layer.attr('data-scroll-speed');
+        const speed = $layer.attr('data-scroll-speed') || 1;
         const transform = `
             translate(
                 ${layerTranslate.x}px, 

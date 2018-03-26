@@ -8,7 +8,7 @@
 
 footer {
     position: relative;
-    height: 60vh;
+    height: 100vh;
     background-color: $dark-bg-color;
     color: $light-text-color;
     padding-top: 10vh;
@@ -17,6 +17,7 @@ footer {
     .social-links {
         float: left;
         margin-right: 20px;
+        margin-bottom: 10px;
     }
 
     .registration {
@@ -29,6 +30,10 @@ footer {
 
     .links {
         margin-bottom: 20px;
+
+        a {
+            margin-bottom: 10px;
+        }
     }
 
     .icon-fb {
@@ -44,7 +49,7 @@ footer {
     }
 
     .h-line {
-        width: 45%;
+        width: 90%;
     }
 
     .projects a {
