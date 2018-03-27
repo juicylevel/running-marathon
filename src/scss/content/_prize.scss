@@ -50,27 +50,27 @@ $handCardHeight: 440;
 
     @media (max-width: 2000px) and (max-height: 1024px) {
         header {
-            top: 35vh;
+            top: 50vh;
             font-size: 3vw;
             left: 8vw;
             width: 40vw;
         }
         .picture {
             @include sizeHandCard(45vw);
-            @include middleTopHandCard(45vw, -15vh);
+            @include middleTopHandCard(45vw, 37vh);
         }
     }
 
     @media (max-width: 2000px) and (max-height: 800px) {
         header {
-            top: 28vh;
+            top: 50vh;
             font-size: 3vw;
             left: 8vw;
             width: 40vw;
         }
         .picture {
             @include sizeHandCard(45vw);
-            @include middleTopHandCard(45vw, -15vh);
+            @include middleTopHandCard(45vw, 37vh);
         }
     }
 
@@ -78,14 +78,14 @@ $handCardHeight: 440;
 
     @media (max-width: 1700px) {
         header {
-            top: 10vh;
+            top: 30vh;
             font-size: 3vw;
             left: 0px;
             right: 0px;
             width: auto;
         }
         .picture {
-            @include middleTopHandCard(45vw, -15vh);
+            @include middleTopHandCard(45vw, 40vh);
             @include sizeHandCard(45vw);
         }
     }
@@ -94,28 +94,28 @@ $handCardHeight: 440;
 
     @media (max-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
         header {
-            top: 10vh;
+            top: 30vh;
             font-size: 6vw;
             left: 0px;
             right: 0px;
             width: auto;
         }
         .picture {
-            @include middleTopHandCard(85vw, -10vh);
+            @include middleTopHandCard(85vw, 50vh);
             @include sizeHandCard(85vw);
         }
     }
 
     @media (max-width: 1366px) and (max-height: 1024px) and (orientation: landscape) {
         header {
-            top: 10vh;
+            top: 30vh;
             left: 0px;
             right: 0px;
             font-size: 3.8vw;
             width: auto;
         }
         .picture {
-            top: 0vh;
+            @include middleTopHandCard(70vw, 50vh);
             @include sizeHandCard(70vw);
         }
     }
@@ -124,7 +124,8 @@ $handCardHeight: 440;
 
     @media (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
         .picture {
-            top: 0vh;
+            top: 30vh;
+            @include middleTopHandCard(70vw, 50vh);
             @include sizeHandCard(70vw);
         }
     }
@@ -136,14 +137,14 @@ $handCardHeight: 440;
             top: 25vh;
         }
         .picture {
-            @include middleTopHandCard(92vw, -5vh);
+            @include middleTopHandCard(92vw, 40vh);
             @include sizeHandCard(92vw);
         }
     }
 
     @media (max-width: 823px) and (max-height: 411px) and (orientation: landscape) {
         .picture {
-            top: 0vh;
+            @include middleTopHandCard(47vw, 50vh);
             @include sizeHandCard(47vw);
         }
     }
@@ -155,7 +156,7 @@ $handCardHeight: 440;
             top: 30vh;
         }
         .picture {
-            @include middleTopHandCard(90vw, -5vh);
+            @include middleTopHandCard(90vw, 35vh);
             @include sizeHandCard(90vw);
         }
     }
@@ -167,7 +168,7 @@ $handCardHeight: 440;
             font-size: 3.8vw;
         }
         .picture {
-            top: 0vh;
+            @include middleTopHandCard(45vw, 55vh);
             @include sizeHandCard(45vw);
         }
     }
@@ -179,14 +180,14 @@ $handCardHeight: 440;
             top: 25vh;
         }
         .picture {
-            @include middleTopHandCard(92vw, -5vh);
+            @include middleTopHandCard(92vw, 35vh);
             @include sizeHandCard(92vw);
         }
     }
 
     @media (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
         .picture {
-            top: 0vh;
+            @include middleTopHandCard(54vw, 50vh);
             @include sizeHandCard(54vw);
         }
     }
@@ -204,7 +205,7 @@ $handCardHeight: 440;
 
     @media (max-width: 667px) and (max-height: 375px) and (orientation: landscape) {
         .picture {
-            top: 3vh;
+            @include middleTopHandCard(51vw, 50vh);
             @include sizeHandCard(51vw);
         }
     }
@@ -213,7 +214,7 @@ $handCardHeight: 440;
 
     @media (max-width: 640px) and (max-height: 360px) and (orientation: landscape) {
         .picture {
-            top: 4vh;
+            @include middleTopHandCard(51vw, 50vh);
             @include sizeHandCard(49vw);
         }
     }
@@ -222,7 +223,7 @@ $handCardHeight: 440;
 
     @media (max-width: 568px) and (max-height: 320px) and (orientation: landscape) {
         .picture {
-            top: 3vh;
+            @include middleTopHandCard(49vw, 50vh);
             @include sizeHandCard(49vw);
         }
     }

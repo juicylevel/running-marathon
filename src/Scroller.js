@@ -2,29 +2,16 @@ import $ from 'jquery';
 import { TweenMax, Power4 } from 'gsap';
 import 'gsap/ScrollToPlugin';
 
-class Parallax {
+class Scroller {
     constructor () {
         this.mousewheelHandler = this.mousewheelHandler.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
         this.init();
     }
 
-    getTranslate ($obj) {
-        const matrix = $obj.css('transform').replace(/[^0-9\-.,]/g, '').split(',');
-        const x = matrix[12] || matrix[4] || 0;
-        const y = matrix[13] || matrix[5] || 0;
-        return { x, y };
-    }
-
     moveLayer ($layer, scrollTop) {
-        const layerTranslate = this.getTranslate($layer);
-        const speed = $layer.attr('data-scroll-speed') || 1;
-        const transform = `
-            translate(
-                ${layerTranslate.x}px, 
-                ${-(scrollTop * speed)}px
-            )
-        `;
+        const speed = parseFloat($layer.attr('data-scroll-speed')) || 1;
+        const transform = `translateY(${-(scrollTop * speed)}px)`;
         $layer.css('transform', transform);
     }
 
@@ -43,7 +30,7 @@ class Parallax {
 
     scrollPage (delta) {
         const time = 2;
-        const distance = 180;
+        const distance = 380;
         const $window = $(window);
 
         TweenMax.to($window, time, { 
@@ -84,4 +71,19 @@ class Parallax {
     }
 }
 
-export default Parallax;
+export default Scroller;
+
+// getTranslate ($obj) {
+//     const matrix = $obj.css('transform').replace(/[^0-9\-.,]/g, '').split(',');
+//     const x = matrix[12] || matrix[4] || 0;
+//     const y = matrix[13] || matrix[5] || 0;
+//     return { x, y };
+// }
+
+// const layerTranslate = this.getTranslate($layer);
+// const transform = `
+//     translate(
+//         ${layerTranslate.x}px, 
+//         ${-(scrollTop * speed)}px
+//    )
+// `;

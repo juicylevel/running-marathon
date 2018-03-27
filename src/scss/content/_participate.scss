@@ -2,7 +2,7 @@
     header {
         text-align: center;
         width: 100%;
-        top: 10vh;
+        top: 65vh;
 
         .text {
             @extend .big-article-text;
@@ -11,7 +11,7 @@
 
     .steps {
         position: absolute;
-        top: -20vh;
+        top: 145vh;
         left: 10%;
         font-size: calc(2vw + 1vh);
         text-transform: uppercase;
