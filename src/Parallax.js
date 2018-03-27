@@ -43,7 +43,7 @@ class Parallax {
 
     scrollPage (delta) {
         const time = 2;
-        const distance = 200;
+        const distance = 180;
         const $window = $(window);
 
         TweenMax.to($window, time, { 
