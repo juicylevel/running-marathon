@@ -1,6 +1,6 @@
 #results {
     header {
-        @extend .big-article-text;
+        font-size: calc(2.5vw + 2.5vh);
         text-align: center;
         position: inherit;
         margin-top: 15vh;
@@ -10,11 +10,12 @@
     article header {
         margin-bottom: 8vh;
         font-size: calc(2vw + 2vh);
+        text-transform: uppercase;
     }
 
     table.top-places {
         margin: 0 auto;
-        width: 80%;
+        width: 60%;
     
         border-collapse: collapse;
         font-size: calc(1.2vw + 1.2vh);
@@ -24,12 +25,12 @@
         }
 
         td.num {
-            width: 15%;
+            width: 25%;
             text-align: center;
         }
 
         td.name {
-            width: 45%;
+            width: 50%;
         }
 
         td.result {
@@ -37,21 +38,29 @@
             text-align: center;
         }
 
-        td.photo {
-            width: 15%;
+        // td.photo {
+        //     width: 15%;
 
-            .photo-winner {
+        //     .photo-winner {
                 
-            }
+        //     }
 
-            .photo-winner-1 {
-                @include image('end.jpg');
-                @include sizev(10vw, 2560, 1440);
-            }
-        }
+        //     .photo-winner-1 {
+        //         @include image('end.jpg');
+        //         @include sizev(10vw, 2560, 1440);
+        //     }
+        // }
 
         tr.bordered td {
             border-bottom: 1px solid #eeeeee;
+            
+        }
+
+        tfoot tr td {
+            font-size: calc(0.8vw + 0.8vh);
+            text-align: center;
+            color: #999;
+            padding-top: 10vh;
         }
 
         @media (max-width: 1024px) {
@@ -61,11 +70,12 @@
         }
     }
 
-    .descend {
+    .participants {
         margin: 0 auto;
         width: 40%;
         font-size: calc(1.2vw + 1.2vh);
         text-align: center;
+        margin-bottom: 15vh;
 
         div {
             margin-bottom: 20px;
@@ -74,7 +84,8 @@
 
     .photos {
         margin: 0 auto;
-        width: 70%;
+        width: 75vw;
+        text-align: center;
 
         .photo {
             margin: 0 20px 20px 0;
@@ -82,23 +93,63 @@
         }
 
         .photo1 {
-            @include image('medals.jpg');
-            @include sizev(20vw, 626, 418);
+            @include image('photo1.jpg');
+            @include sizev(20vw, 960, 1280);
         }
 
         .photo2 {
-            @include image('team.jpg');
-            @include sizev(20vw, 626, 417);
+            @include image('photo2.jpg');
+            @include sizev(20vw, 960, 1280);
         }
 
         .photo3 {
-            @include image('intro.jpg');
-            @include sizev(20vw, 2560, 1708);
+            @include image('photo3.jpg');
+            @include sizev(20vw, 960, 1280);
         }
 
         .photo4 {
-            @include image('end.jpg');
-            @include sizev(20vw, 2560, 1440);
+            @include image('photo4.jpg');
+            @include sizev(20vw, 1280, 960);
+        }
+
+        .photo5 {
+            @include image('photo5.jpg');
+            @include sizev(20vw, 1280, 960);
+        }
+
+        .photo6 {
+            @include image('photo6.jpg');
+            @include sizev(20vw, 1280, 960);
+        }
+
+        .photo7 {
+            @include image('photo7.jpg');
+            @include sizev(20vw, 960, 1280);
+        }
+
+        .photo8 {
+            @include image('photo8.jpg');
+            @include sizev(20vw, 960, 1280);
+        }
+
+        .photo9 {
+            @include image('photo9.jpg');
+            @include sizev(20vw, 961, 969);
+        }
+
+        .photo10 {
+            @include image('photo10.jpg');
+            @include sizev(20vw, 1280, 960);
+        }
+
+        .photo11 {
+            @include image('photo11.jpg');
+            @include sizev(20vw, 960, 1280);
+        }
+
+        .photo12 {
+            @include image('photo12.jpg');
+            @include sizev(20vw, 960, 1280);
         }
     }
 }
