@@ -66,7 +66,25 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             inject: true,
+            filename: 'index.html',
             template: './public/index.html',
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true
+            }
+        }),
+        new HtmlWebpackPlugin({
+            inject: true,
+            filename: 'results.html',
+            template: './public/results.html',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,

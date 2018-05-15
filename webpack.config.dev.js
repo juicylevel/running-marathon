@@ -10,7 +10,10 @@ const env = 'development';
 module.exports = {
     watch: true,
     devtool: 'cheap-module-source-map',
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        results: './src/index.js'
+    },
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: './js/build.js'
@@ -50,7 +53,13 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             inject: true,
+            filename: 'index.html',
             template: './public/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            inject: true,
+            filename: 'results.html',
+            template: './public/results.html'
         }),
         new ExtractTextPlugin('css/style.css'),
         new webpack.DefinePlugin(env)

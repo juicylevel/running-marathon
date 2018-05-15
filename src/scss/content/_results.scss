@@ -1,0 +1,104 @@
+#results {
+    header {
+        @extend .big-article-text;
+        text-align: center;
+        position: inherit;
+        margin-top: 15vh;
+        margin-bottom: 10vh;
+    }
+
+    article header {
+        margin-bottom: 8vh;
+        font-size: calc(2vw + 2vh);
+    }
+
+    table.top-places {
+        margin: 0 auto;
+        width: 80%;
+    
+        border-collapse: collapse;
+        font-size: calc(1.2vw + 1.2vh);
+
+        td {
+            padding: 25px 0 20px 0;
+        }
+
+        td.num {
+            width: 15%;
+            text-align: center;
+        }
+
+        td.name {
+            width: 45%;
+        }
+
+        td.result {
+            width: 25%;
+            text-align: center;
+        }
+
+        td.photo {
+            width: 15%;
+
+            .photo-winner {
+                
+            }
+
+            .photo-winner-1 {
+                @include image('end.jpg');
+                @include sizev(10vw, 2560, 1440);
+            }
+        }
+
+        tr.bordered td {
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        @media (max-width: 1024px) {
+            .name {
+                text-align: center;
+            }
+        }
+    }
+
+    .descend {
+        margin: 0 auto;
+        width: 40%;
+        font-size: calc(1.2vw + 1.2vh);
+        text-align: center;
+
+        div {
+            margin-bottom: 20px;
+        }
+    }
+
+    .photos {
+        margin: 0 auto;
+        width: 70%;
+
+        .photo {
+            margin: 0 20px 20px 0;
+            display: inline-block;
+        }
+
+        .photo1 {
+            @include image('medals.jpg');
+            @include sizev(20vw, 626, 418);
+        }
+
+        .photo2 {
+            @include image('team.jpg');
+            @include sizev(20vw, 626, 417);
+        }
+
+        .photo3 {
+            @include image('intro.jpg');
+            @include sizev(20vw, 2560, 1708);
+        }
+
+        .photo4 {
+            @include image('end.jpg');
+            @include sizev(20vw, 2560, 1440);
+        }
+    }
+}
