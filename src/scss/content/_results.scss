@@ -1,3 +1,12 @@
+#intro.results-intro {
+    .picture.results {
+        background: url('../images/results-intro.jpg') center top no-repeat;
+    }
+    .scroll-down {
+        bottom: 8vh;
+    }
+}
+
 #results {
     header {
         font-size: calc(2.5vw + 2.5vh);
@@ -12,6 +21,8 @@
         font-size: calc(2vw + 2vh);
         text-transform: uppercase;
     }
+
+    
 
     table.top-places {
         margin: 0 auto;
