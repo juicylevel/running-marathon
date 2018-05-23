@@ -162,5 +162,10 @@
             @include image('photo12.jpg');
             @include sizev(20vw, 960, 1280);
         }
+
+        .photo13 {
+            @include image('pscb-running-marathon-2018.jpg?1');
+            @include sizev(26vw, 1256, 1280);
+        }
     }
 }
