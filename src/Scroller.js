@@ -50,7 +50,7 @@ class Scroller {
         let delta;
 
         if (event.wheelDelta) {
-            delta = event.wheelDelta / 120;
+            delta = event.wheelDelta / 150;
         } else if (event.detail) {
             delta = -event.detail / 3;
         } else {
