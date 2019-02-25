@@ -7,6 +7,7 @@
 }
 
 footer {
+    height: 100%;
     color: $light-text-color;
     background-color: $dark-bg-color;
     
@@ -59,7 +60,6 @@ footer {
     }
 
     .bg {
-        height: 60vh;
         padding-top: 10vh;
         padding-left: 7vw;
         padding-right: 7vw;
