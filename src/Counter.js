@@ -7,7 +7,7 @@ class Counter {
     constructor () {
         this.end = null;
         this.time = null;
-        this.marathonDate = '2018-05-13T11:00';
+        this.marathonDate = '2019-05-12T11:00';
         this.start();
     }
 
@@ -29,7 +29,8 @@ class Counter {
             const format = `
                 [<span class="marker">]D[</span>] ${daysTitle} 
                 [<span class="marker">]H[</span>] ${hoursTitle} 
-                [<span class="marker">]mm[</span>] мин 
+                [<span class="marker minutes">]mm[</span>] мин 
+                [<span class="marker seconds">]ss[</span>] сек
             `;
 
             // [<span class="marker">]ss[</span>] сек

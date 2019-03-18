@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import Scroller from './Scroller';
-// import Counter from './Counter';
+import Counter from './Counter';
 import 'normalize.css';
 import './scss/index.scss';
 
@@ -9,7 +9,7 @@ import './scss/index.scss';
 
 $(document).ready(() => {
     new Scroller();
-    // new Counter();
+    new Counter();
 
     // const lightgalleryEl = document.getElementById('lightgallery');
     // if (lightgalleryEl) {

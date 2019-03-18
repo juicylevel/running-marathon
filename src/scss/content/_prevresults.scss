@@ -1,11 +1,11 @@
-#counter {
+#prevresults {
     height: 100vh;
 
     header {
         position: absolute;
         text-align: center;
         width: 100%;
-        top: 95vh;
+        top: 110vh;
 
         .text {
             @extend .big-article-text;
@@ -16,18 +16,11 @@
     .bg {
         width: 100%;
         height: 100%;
-        background: $odd-article-color;
+        background: $even-article-color;
     }
 
     .scroll-down {
         @include scroll-down();
         bottom: 5vh;
-    }
-}
-
-#marathon-date {
-    .seconds, .minutes {
-        display: inline-block;
-        width: 100px;
     }
 }
