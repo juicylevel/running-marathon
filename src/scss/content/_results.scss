@@ -22,8 +22,6 @@
         text-transform: uppercase;
     }
 
-    
-
     table.top-places {
         margin: 0 auto;
         width: 60%;
@@ -166,6 +164,21 @@
         .photo13 {
             @include image('pscb-running-marathon-2018.jpg?1');
             @include sizev(26vw, 1256, 1280);
+        }
+
+        .photo14 {
+            @include image('photo-2019-1.jpg');
+            @include sizev(20vw, 768, 1024);
+        }
+
+        .photo15 {
+            @include image('photo-2019-2.jpg');
+            @include sizev(20vw, 768, 1024);
+        }
+
+        .photo16 {
+            @include image('photo-2019-3.jpg');
+            @include sizev(20vw, 768, 1024);
         }
     }
 }
