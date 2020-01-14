@@ -5,12 +5,12 @@
     }
 
     header {
-        @extend .overlay;
+        /*@extend .overlay;
         position: absolute;
         width: 40%;
-        bottom: 15vh;
+        bottom: 15vh;*/
         min-width: 300px;
-        right: 0;
+        left: 0;
         z-index: 100;
 
         .text {
@@ -18,15 +18,16 @@
             padding: 5vh 2vh;
             font-size: calc(2.8vw + 1.8vh);
             text-align: center;
+            color: white;
         }
     }
 
     .logo {
         @extend .overlay;
-        @include sizev(31vw, 789, 408);
+        @include sizev(38vw, 789, 408);
         position: absolute;
-        top: 15vh;
-        left: 5vw;
+        top: 10vh;
+        left: 0;
         min-width: 270px;
         min-height: 170px;
         cursor: pointer;
@@ -42,7 +43,7 @@
     .picture {
         width: 100%;
         height: 100vh;
-        background: url('../images/intro.jpg') center bottom no-repeat;
+        background: url('../images/intro2020.jpg') center bottom no-repeat;
         background-size: cover;
         will-change: scroll-position;
     }

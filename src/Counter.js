@@ -7,7 +7,7 @@ class Counter {
     constructor () {
         this.end = null;
         this.time = null;
-        this.marathonDate = '2019-05-12T11:00';
+        this.marathonDate = '2020-05-10T11:00';
         this.start();
     }
 
