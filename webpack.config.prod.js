@@ -98,6 +98,23 @@ module.exports = {
                 minifyURLs: true
             }
         }),
+        new HtmlWebpackPlugin({
+            inject: true,
+            filename: 'teleworking.html',
+            template: './public/teleworking.html',
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                keepClosingSlash: true,
+                minifyJS: true,
+                minifyCSS: true,
+                minifyURLs: true
+            }
+        }),
         new ExtractTextPlugin('css/style.css'),
         new webpack.DefinePlugin(env),
         new UglifyJSPlugin()

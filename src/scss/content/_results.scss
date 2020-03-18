@@ -27,15 +27,7 @@
     }
 
     table.top-places {
-        margin: 0 auto;
         width: 60%;
-    
-        border-collapse: collapse;
-        font-size: calc(1.2vw + 1.2vh);
-
-        td {
-            padding: 25px 0 20px 0;
-        }
 
         td.num {
             width: 25%;
@@ -49,37 +41,6 @@
         td.result {
             width: 25%;
             text-align: center;
-        }
-
-        // td.photo {
-        //     width: 15%;
-
-        //     .photo-winner {
-                
-        //     }
-
-        //     .photo-winner-1 {
-        //         @include image('end.jpg');
-        //         @include sizev(10vw, 2560, 1440);
-        //     }
-        // }
-
-        tr.bordered td {
-            border-bottom: 1px solid #eeeeee;
-            
-        }
-
-        tfoot tr td {
-            font-size: calc(0.8vw + 0.8vh);
-            text-align: center;
-            color: #999;
-            padding-top: 10vh;
-        }
-
-        @media (max-width: 1024px) {
-            .name {
-                text-align: center;
-            }
         }
     }
 

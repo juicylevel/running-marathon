@@ -1,0 +1,89 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    font-size: calc(1vw + 1vh);
+    line-height: 1.5;
+}
+
+section > header {
+    text-transform: uppercase;
+    font-size: calc(3.3vw + 2.3vh);
+    margin-bottom: 4rem;
+}
+
+section ol {
+    li {
+        margin-bottom: 3vh;
+
+        > ul {
+            margin-top: 3vh;
+        }
+    }
+}
+
+section .picture {
+    background-position-x: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.h-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 80vw;
+    flex: 1;
+
+    > * {
+        flex: 1;
+
+        &:first-child {
+            margin-right: 5vw;
+        }
+    }
+}
+
+section#intro {
+    .picture {
+        @include sizev(30vw, 1083, 1417);
+        background-image: url('../images/teletrabajo.jpg');
+        background-position-y: bottom;
+    }
+}
+
+section#howto {
+    .picture {
+        @include sizev(45vw, 626,  626);
+        background-image: url('../images/employee-questions.jpg');
+        background-position-y: 10vh;
+    }
+}
+
+section#questions {
+    .picture {
+        @include sizev(30vw, 513, 710);
+        background-image: url('../images/what-next.jpg');
+        background-position-y: center;
+    }
+}
+
+section#hardware {
+    .picture {
+        @include sizev(50vw, 884, 991);
+        background-image: url('../images/workspace.jpg');
+        background-position-y: center;
+    }
+}
+
+section#settings {
+    .picture {
+        @include sizev(35vw, 869, 503);
+        background-image: url('../images/admin.jpg');
+        margin-bottom: 3rem;
+    }
+}

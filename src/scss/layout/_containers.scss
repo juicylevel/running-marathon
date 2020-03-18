@@ -2,10 +2,34 @@ article, footer {
     position: relative;
 }
 
-header {
+article > header {
     position: absolute;
 }
 
 .clear-both {
     clear: both;
+}
+
+table {
+    margin: 0 auto;
+    width: 100%;
+
+    border-collapse: collapse;
+    font-size: calc(1.2vw + 1.2vh);
+
+    td {
+        padding: 25px 0 20px 0;
+    }
+
+    tr.bordered td {
+        border-bottom: 1px solid #eeeeee;
+        
+    }
+
+    tfoot tr td {
+        font-size: calc(0.8vw + 0.8vh);
+        text-align: center;
+        color: #999;
+        padding-top: 10vh;
+    }
 }

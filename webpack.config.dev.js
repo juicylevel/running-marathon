@@ -61,6 +61,11 @@ module.exports = {
             filename: 'results.html',
             template: './public/results.html'
         }),
+        new HtmlWebpackPlugin({
+            inject: true,
+            filename: 'teleworking.html',
+            template: './public/teleworking.html'
+        }),
         new ExtractTextPlugin('css/style.css'),
         new webpack.DefinePlugin(env)
     ]
