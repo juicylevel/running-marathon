@@ -1,10 +1,6 @@
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
+    margin-bottom: 15vh;
+    margin-top: 15vh;
     margin-left: 15vw;
     margin-right: 15vw;
     font-size: calc(1vw + 1vh);
@@ -15,6 +11,8 @@ section > header {
     text-transform: uppercase;
     font-size: calc(3.3vw + 2.3vh);
     margin-bottom: 4rem;
+    text-align: center;
+    color: #777;
 }
 
 section ol {
@@ -28,62 +26,66 @@ section ol {
 }
 
 section .picture {
-    background-position-x: center;
-    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .h-wrapper {
     display: flex;
     flex-direction: row;
-    max-width: 80vw;
-    flex: 1;
-
+    align-items: center;
     > * {
-        flex: 1;
-
         &:first-child {
+            flex: 0.6;
             margin-right: 5vw;
+            font-style: italic;
+        }
+        &:last-child {
+            flex: 0.4;
         }
     }
 }
 
 section#intro {
     .picture {
-        @include sizev(30vw, 1083, 1417);
-        background-image: url('../images/teletrabajo.jpg');
-        background-position-y: bottom;
-    }
-}
-
-section#howto {
-    .picture {
-        @include sizev(45vw, 626,  626);
-        background-image: url('../images/employee-questions.jpg');
-        background-position-y: 10vh;
-    }
-}
-
-section#questions {
-    .picture {
-        @include sizev(30vw, 513, 710);
-        background-image: url('../images/what-next.jpg');
+        @include sizev(25vw, 700, 501);
+        background-image: url('../images/intro.jpeg');
+        background-size: contain;
+        background-position-x: right;
         background-position-y: center;
+        align-self: center;
     }
 }
 
-section#hardware {
-    .picture {
-        @include sizev(50vw, 884, 991);
-        background-image: url('../images/workspace.jpg');
-        background-position-y: center;
-    }
-}
+table.engineers {
+    font-size: calc(0.7vw + 0.7vh);
 
-section#settings {
-    .picture {
-        @include sizev(35vw, 869, 503);
-        background-image: url('../images/admin.jpg');
-        margin-bottom: 3rem;
+    .photo1 {
+        @include image('photo1.png');
+        @include sizev(5vw, 96, 123);
+    }
+    
+    .photo2 {
+        @include image('photo2.png');
+        @include sizev(5vw, 97, 121);
+    }
+    
+    .photo3 {
+        @include image('photo3.png');
+        @include sizev(5vw, 100, 91);
+    }
+    
+    .photo4 {
+        @include image('photo4.png');
+        @include sizev(5vw, 92, 121);
+    }
+    
+    .photo5 {
+        @include image('photo5.png');
+        @include sizev(5vw, 99, 121);
+    }
+    
+    .photo6 {
+        @include image('photo6.png');
+        @include sizev(5vw, 96, 119);
     }
 }
